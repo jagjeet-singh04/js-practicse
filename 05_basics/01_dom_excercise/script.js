@@ -84,9 +84,7 @@ document.getElementById('feedbackForm').addEventListener(
     }
 )
 
-
 // example 9 
-
 document.addEventListener('DOMContentLoaded' , function(){
     document.getElementById('domStatus').textContent = `Dom Load Complete` ; 
 } )
