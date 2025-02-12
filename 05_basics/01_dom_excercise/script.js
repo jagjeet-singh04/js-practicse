@@ -45,3 +45,51 @@ document.getElementById('removeLastTask')
     let taskList = document.getElementById('taskList') ; 
     taskList.lastElementChild.remove() ; 
 })
+
+
+// example 6 
+// document.getElementById('ClickMeButton')
+// .addEventListener('click' , function(){
+//     alert('Hello from Chai') ; 
+// })
+// document.getElementById('ClickMeButton')
+// .addEventListener('mouseover' , function(){
+//     alert('Hello from Chai') ; 
+// })
+document.getElementById('ClickMeButton')
+.addEventListener('dblclick' , function(){
+    alert('Hello from Chai') ; 
+})
+
+// example 7 
+document.getElementById('teaList').addEventListener('click' , 
+    function(event){
+        // console.log(event.target) ; 
+        if ( event.target && event.target.matches('.teaItem'))
+        {
+            alert('you Selected : ' + event.target.textContent) ; 
+        }
+
+})
+
+
+// example 8 
+document.getElementById('feedbackForm').addEventListener(
+    'submit' , function(event){
+        // alert("submitted") ; 
+        event.preventDefault() ;
+        let feedback = document.getElementById('feedbackInput').value ; 
+        console.log(feedback) ; 
+        document.getElementById('feedbackDisplay').textContent = `feedback is : ${feedback}` ; 
+    }
+)
+
+// example 9 
+document.addEventListener('DOMContentLoaded' , function(){
+    document.getElementById('domStatus').textContent = `Dom Load Complete` ; 
+} )
+
+// example 10 
+document.getElementById('toggleHighlight').addEventListener('click' , function(){
+    let text = document.getElementById('descriptionText').classList.add('highlight') ; 
+})
